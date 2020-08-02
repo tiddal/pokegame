@@ -1,9 +1,13 @@
 import React from 'react';
 import Pokedex from '../containers/Pokedex';
+import GlobalStyle from '../styles';
 
 function App() {
   return (
-    <Pokedex />
+    <>
+      <GlobalStyle />
+      <Pokedex />
+    </>
   );
 }
 

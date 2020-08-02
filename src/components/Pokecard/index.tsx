@@ -1,6 +1,8 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import {
+  Container, Content, Name, Image, Data,
+} from './styles';
 
 interface PokecardProps {
   id: number;
@@ -12,22 +14,27 @@ interface PokecardProps {
 const Pokecard: React.FC<PokecardProps> = ({
   id, name, type, baseExperience,
 }) => {
-  const imageSource = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+  const imageSource = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id.toString().padStart(3, '0')}.png`;
   return (
-    <div>
-      <p>{name}</p>
-      <img src={imageSource} alt={name} />
-      <div>
-        Type:
-        {' '}
-        {type}
-      </div>
-      <div>
-        EXP:
-        {' '}
-        {baseExperience}
-      </div>
-    </div>
+    <Container>
+      <Content>
+        <Name>{name}</Name>
+        <Image>
+          <img src={imageSource} alt={name} />
+        </Image>
+        <Data>
+          Type:
+          {' '}
+          {type}
+        </Data>
+        <Data>
+          EXP:
+          {' '}
+          {baseExperience}
+        </Data>
+      </Content>
+
+    </Container>
   );
 };
 
