@@ -1,14 +1,9 @@
 import React from 'react';
-import Pokecard from '../components/Pokecard';
+import Pokedex from '../containers/Pokedex';
 
 function App() {
   return (
-    <Pokecard
-      id={4}
-      name="Charmander"
-      type="fire"
-      baseExperience={62}
-    />
+    <Pokedex />
   );
 }
 
