@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Pokegame - The Modern React Bootcamp
 
-<img src="https://raw.githubusercontent.com/tiddal/pokegame/master/.github/assets/screenShot.jpg" />
+<img src=".github/assets/screenShot.jpg" />
 
 <!-- omit in toc -->
 ## A battle between Two teams of four Pokemons
