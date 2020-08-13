@@ -1,12 +1,12 @@
 import React from 'react';
-import Pokedex from '../containers/Pokedex';
 import GlobalStyle from '../styles';
+import Pokegame from '../pages/Pokegame';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Pokedex />
+      <Pokegame />
     </>
   );
 }

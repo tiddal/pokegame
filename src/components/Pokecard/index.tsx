@@ -4,19 +4,19 @@ import {
   Container, Content, Name, Image, Data,
 } from './styles';
 
-interface PokecardProps {
+export interface PokemonProps {
   id: number;
   name: string;
-  type: string;
+  type: 'bug' | 'water' | 'fire' | 'flying' | 'electric' | 'fairy' | 'ghost' | 'normal';
   baseExperience: number;
 }
 
-const Pokecard: React.FC<PokecardProps> = ({
+const Pokecard: React.FC<PokemonProps> = ({
   id, name, type, baseExperience,
 }) => {
   const imageSource = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id.toString().padStart(3, '0')}.png`;
   return (
-    <Container>
+    <Container type={type}>
       <Content>
         <Name>{name}</Name>
         <Image>
@@ -33,7 +33,6 @@ const Pokecard: React.FC<PokecardProps> = ({
           {baseExperience}
         </Data>
       </Content>
-
     </Container>
   );
 };
